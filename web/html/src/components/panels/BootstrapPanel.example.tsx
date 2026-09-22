@@ -8,11 +8,9 @@ import { BootstrapPanel } from "./BootstrapPanel";
 
 export default () => {
   return (
-    <>
-      <p>BootstrapPanel with title:</p>
-      <BootstrapPanel title="Bootstrap title" footer="testing">
-        stuff
-      </BootstrapPanel>
-    </>
+    <BootstrapPanel title="Example Bootstrap Panel" icon="fa-cube">
+      <p>This is a bootstrap-style panel used in manager pages.</p>
+      <p>It provides a consistent container with heading.</p>
+    </BootstrapPanel>
   );
 };
