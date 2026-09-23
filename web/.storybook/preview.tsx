@@ -208,7 +208,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Components", "Manager", "Legacy Example Stories"],
+        order: ["Components", "Compositions", "Views", "Deprecated", "Legacy Example Stories"],
         method: "alphabetical",
       },
     },
