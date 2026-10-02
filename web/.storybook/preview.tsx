@@ -106,8 +106,8 @@ type StorybookGlobal = typeof globalThis & {
   t: typeof t;
   jQuery: JQueryStatic;
   Loggerhead: Loggerhead;
-  handleSst: (...args: any[]) => void;
-  bootstrap: any;
+  handleSst: () => void;
+  bootstrap: typeof import("bootstrap");
 };
 
 const storybookWindow = window as StorybookWindow;
@@ -135,8 +135,7 @@ storybookGlobal.handleSst ??= () => undefined;
 
 // Import and register Bootstrap after jQuery is available so jQuery plugins can be registered
 const bootstrapReady = import("bootstrap").then((bootstrapImport) => {
-  const bootstrap = bootstrapImport as any;
-  storybookGlobal.bootstrap = bootstrap;
+  storybookGlobal.bootstrap = bootstrapImport;
 });
 
 const loggerHead = new Loggerhead("", (headers) => headers);
