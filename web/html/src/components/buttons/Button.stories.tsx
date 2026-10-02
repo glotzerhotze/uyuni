@@ -7,7 +7,7 @@
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
 import { action } from "storybook/actions";
 
-import { StoryRow, StripedStorySection } from "manager/storybook/layout";
+import { ExampleRow, StripedExampleSection } from "components/example-layout";
 
 import { Button } from "./index";
 
@@ -135,14 +135,14 @@ export const Variants: Story = {
     },
   },
   render: () => (
-    <StripedStorySection>
-      <StoryRow>
+    <StripedExampleSection>
+      <ExampleRow>
         <Button className="btn-primary" text="Primary" />
         <Button className="btn-default" text="Default" />
         <Button className="btn-danger" text="Danger" />
         <Button className="btn-tertiary" text="Tertiary" />
-      </StoryRow>
-    </StripedStorySection>
+      </ExampleRow>
+    </StripedExampleSection>
   ),
 };
 
@@ -157,16 +157,16 @@ export const Icons: Story = {
     },
   },
   render: () => (
-    <StripedStorySection>
-      <StoryRow>
+    <StripedExampleSection>
+      <ExampleRow>
         <Button className="btn-primary" title="Add" icon="fa-plus" />
         <Button className="btn-default" title="Delete" icon="fa-trash" />
         <Button className="btn-primary" icon="fa-plus" text="Primary" />
         <Button className="btn-default" icon="fa-plus" text="Default" />
         <Button className="btn-tertiary" icon="fa-plus" text="Tertiary" />
         <Button className="btn-tertiary" title="Delete" icon="fa-trash" />
-      </StoryRow>
-    </StripedStorySection>
+      </ExampleRow>
+    </StripedExampleSection>
   ),
 };
 
@@ -180,8 +180,8 @@ export const Sizes: Story = {
     },
   },
   render: () => (
-    <StripedStorySection>
-      <StoryRow>
+    <StripedExampleSection>
+      <ExampleRow>
         <Button className="btn-primary" text="Default button" />
         <Button className="btn-primary btn-sm" text="Small button" />
         <Button className="btn-default btn-sm" text="Small button" />
@@ -189,8 +189,8 @@ export const Sizes: Story = {
         <Button className="btn-default btn-sm" title="Delete" icon="fa-trash" />
         <Button className="btn-primary btn-sm" title="Add" icon="fa-plus" />
         <Button className="btn-tertiary btn-sm" title="Delete" icon="fa-trash" />
-      </StoryRow>
-    </StripedStorySection>
+      </ExampleRow>
+    </StripedExampleSection>
   ),
 };
 
@@ -204,13 +204,13 @@ export const Disabled: Story = {
     },
   },
   render: () => (
-    <StripedStorySection>
-      <StoryRow>
+    <StripedExampleSection>
+      <ExampleRow>
         <Button className="btn-primary" text="Primary" disabled />
         <Button className="btn-default" text="Default" disabled />
         <Button className="btn-danger" text="Danger" disabled />
         <Button className="btn-tertiary" text="Tertiary" disabled />
-      </StoryRow>
-    </StripedStorySection>
+      </ExampleRow>
+    </StripedExampleSection>
   ),
 };
