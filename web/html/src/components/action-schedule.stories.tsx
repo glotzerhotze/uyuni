@@ -23,7 +23,7 @@ const meta = {
     },
   },
   args: {
-    earliest: localizedMoment("2026-09-23T14:30:00Z"),
+    earliest: localizedMoment().add(1, "day"),
     actionChains: [
       { id: 11, text: "Monthly maintenance" },
       { id: 12, text: "Production rollout" },

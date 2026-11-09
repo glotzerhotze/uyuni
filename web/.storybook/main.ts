@@ -28,7 +28,7 @@ const scssLoaders = (styleLoaderOptions: Record<string, unknown> = {}) => [
 ];
 
 const config: StorybookConfig = {
-  stories: ["../html/src/**/*.stories.@(ts|tsx)"],
+  stories: ["../html/src/{components,core,manager}/**/*.stories.@(ts|tsx)"],
   staticDirs: [
     {
       from: path.resolve(web, "node_modules/ace-builds/src-noconflict"),

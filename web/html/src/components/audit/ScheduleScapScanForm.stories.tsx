@@ -93,7 +93,7 @@ const meta = {
       { id: 301, policyName: "CIS Server Level 1" },
       { id: 302, policyName: "PCI DSS" },
     ],
-    earliest: localizedMoment("2026-09-24T09:00:00Z"),
+    earliest: localizedMoment().add(1, "day"),
     minions: [{ id: 1000010001 }],
     createRecurringLink: "/rhn/manager/recurring/recurring-actions",
     onSubmit: async (model) => {
