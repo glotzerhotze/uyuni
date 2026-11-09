@@ -3,11 +3,18 @@
   "include": [
     "./*.ts",
     "./*.tsx",
-    "../html/src/**/*.stories.ts",
-    "../html/src/**/*.stories.tsx",
-    "../html/src/core/log/index.ts",
+    "../html/src/components/**/*.ts",
+    "../html/src/components/**/*.tsx",
+    "../html/src/core/**/*.ts",
+    "../html/src/core/**/*.tsx",
+    "../html/src/manager/**/*.ts",
+    "../html/src/manager/**/*.tsx",
+    "../html/src/utils/**/*.ts",
+    "../html/src/utils/**/*.tsx",
     "../html/src/global.d.ts",
-    "../html/src/imports.d.ts"
+    "../html/src/imports.d.ts",
+    "../html/src/lib.es5.d.ts",
+    "../html/src/object.d.ts"
   ],
   "exclude": [
     "../html/src/storybook/generated/**/*"
@@ -16,7 +23,8 @@
     "moduleResolution": "bundler",
     "types": [
       "jquery",
-      "node"
+      "node",
+      "jest"
     ]
   }
 }
