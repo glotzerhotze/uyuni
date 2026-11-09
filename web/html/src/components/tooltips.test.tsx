@@ -1,0 +1,36 @@
+/*
+ * SPDX-FileCopyrightText: 2026 SUSE LLC
+ *
+ * SPDX-License-Identifier: GPL-2.0-only
+ */
+
+import { initializeTooltips } from "./tooltips";
+
+describe("initializeTooltips", () => {
+  test("initializes each trigger and its event listeners only once", () => {
+    const mutationObserver = jest.spyOn(globalThis, "MutationObserver").mockImplementation(
+      () =>
+        ({
+          observe: jest.fn(),
+          disconnect: jest.fn(),
+          takeRecords: () => [],
+        }) as unknown as MutationObserver
+    );
+    document.body.innerHTML = '<button data-bs-toggle="tooltip">Help</button>';
+    const hide = jest.fn();
+    const Tooltip = jest.fn(() => ({ hide }));
+    (globalThis as any).bootstrap = {
+      Tooltip,
+    };
+
+    initializeTooltips();
+    initializeTooltips();
+
+    expect(Tooltip).toBeCalledTimes(1);
+
+    document.querySelector("button")?.dispatchEvent(new Event("click"));
+    expect(hide).toBeCalledTimes(1);
+
+    mutationObserver.mockRestore();
+  });
+});

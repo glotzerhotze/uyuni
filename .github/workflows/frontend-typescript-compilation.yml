@@ -56,3 +56,6 @@ jobs:
 
     - name: Compile Typescript
       run: npm --prefix web run tsc
+
+    - name: Compile Storybook Typescript
+      run: npm --prefix web run tsc:storybook
