@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: 2026 SUSE LLC
+ *
+ * SPDX-License-Identifier: GPL-2.0-only
+ */
+
 import { type MouseEvent, type ReactElement, cloneElement } from "react";
 
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
